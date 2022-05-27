@@ -36,7 +36,7 @@ public class AcctTxnController {
 			@RequestParam(name = "page", defaultValue = "0", required  = false) Integer page,
 			@RequestParam(name = "pageSize", defaultValue = "20", required  = false) Integer pageSize) {
 
-		log.info("Retrieving transaction details for the account: " + acctNumber);
+		System.out.println("Retrieving transaction details for the account test pipeline: " + acctNumber);
 
 		return ResponseEntity.ok(txnService.getTxnDetails(acctNumber,
 				PageRequest.of(page, pageSize, Sort.by("createdDate").descending())));
