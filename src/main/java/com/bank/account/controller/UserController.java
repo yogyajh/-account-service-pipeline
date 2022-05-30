@@ -37,7 +37,7 @@ public class UserController {
 	@GetMapping(value = "/accounts", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<UserAcctResource>> userAccounts(@RequestParam("userId") Long userId) {
 
-		log.info("Retrieving accounts for user: " + userId);
+		log.info("Retrieving accounts for user : " + userId);
 
 		return ResponseEntity.ok(userService.getUserAccounts(userId));
 	}
