@@ -1,0 +1,8 @@
+replicaCount: 1
+image:
+  repository: "spring-k8s"
+  tag: "1.2"
+  pullPolicy: IfNotPresent
+service:
+  type: NodePort
+  port: 8080
